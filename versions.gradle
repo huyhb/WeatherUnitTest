@@ -1,0 +1,15 @@
+ext.deps = [:]
+
+def versions = [:]
+versions.lifecycle_version = "2.0.0-alpha1"
+
+def lifecycle = [:]
+lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle_version" // both
+lifecycle.view_model =
+        "androidx.lifecycle:lifecycle-viewmodel:$versions.lifecycle_version" // use -ktx fo kotlin
+lifecycle.live_data = "androidx.lifecycle:lifecycle-livedata:$versions.lifecycle_version"
+lifecycle.lifecycle = "androidx.lifecycle:lifecycle-runtime:$versions.lifecycle_version"
+lifecycle.compiler = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle_version"
+lifecycle.test = "androidx.arch.core:core-testing:$versions.lifecycle_version"
+lifecycle.java8 = "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycle_version"
+deps.lifecycle = lifecycle
